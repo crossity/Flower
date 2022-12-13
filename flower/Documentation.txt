@@ -1,0 +1,112 @@
+-- FLOWER programming language --
+
+Main function:
+	fn _main =>
+		CODE
+	end
+
+
+Variables:
+	- creating:
+		int var = 1
+		int var = 'w'
+		char var = 'w'
+	- changing:
+		var = 1
+		var += 1
+		var -= 1
+		var *= 1
+		var /= 1
+		var %= 1
+
+Arrays:
+	- creating:
+		int[size] arr = {1, 2, 3}
+		int[size] arr = 1
+		char[size] arr = {'1', '2', '3'}
+		char[size] arr = '2'
+		char[size] arr = "123"
+	- changing:
+		arr[0] = 1
+		arr[0] += 1
+		arr[0] -= 1
+		arr[0] *= 1
+		arr[0] /= 1
+		arr[0] %= 1
+
+Math:(all the signs are reading from left to right)
+	- examples:
+		var = 2 + 3 * 3 % arr[0]
+	- explaining:
+		var = 2
+		var += 3
+		var *= 3
+		var %= arr[0]
+
+Constans(before main function):
+	const string str "Hello, World!" 10 end (it is pointer to string begin)
+	const int var 10 (you cant get its pointer)
+
+Print:
+	- variables:
+		print int var
+		print char var
+	- arrays
+		print int arr[0]
+		print char arr[0]
+	- strings
+		print "Hello, World"
+	- const strings
+		print string const_var
+	- const variables:
+		print int const_var
+		print char const_var
+
+While Loop:
+	- example:
+		while var == 1 =>
+			CODE
+		end
+	- break:
+		break
+
+If:
+	- example:
+		if var == 1 =>
+			CODE
+		end
+		else =>
+			CODE
+		end
+
+Syscall:
+	- example:
+		SYSCALL 1, 0
+	- explonation:
+		mov rax, 1
+		mov rdi, 0
+
+Function:
+	- example:
+		fn NAME a b c =>
+			return a + b + c
+		end
+	- explonation:
+		function with name NAME takes variables a, b, c, 
+		and return sum of a, b and c.
+	- calling:
+		.NAME 1, 2, 3 -> var
+
+Pointers:
+	- example:
+		int var = 2
+		int VarPointer = $var
+		int[2] arr = {1, 2}
+		int Arr0Pointer = $arr
+		int Arr1Pointer = $arr[1]
+
+Memory:
+	- example:
+		mem 4001230, 12
+	- explonation:
+		write in 4001230 memory byte code for 12
